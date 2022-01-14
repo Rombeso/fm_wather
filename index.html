@@ -16,22 +16,36 @@
             <img src="/314807_search_icon.png" alt="">
         </div>
         <section class='left'>
-            <div class="display">
-                <div class="temp-1">14°</div>
-                <div class="img-1">
+            <div class="display now active-dis">
+                <div class="now_temperature"></div>
+                <div class="now_img">
                     <img src="/icons8-cloud-96-1.png">
                 </div>
                 <div class="footer-1">
-                    <div class="city-1">Aktobe</div>
-                    <div class="love-1">
-                        <img class="love-1-img" src="/Shape.png" alt="">
+                    <div class="now_lacation"></div>
+                    <div class="now_favorite">
+                        <img class="now_favorite_img" src="/Shape.png" alt="">
                     </div>
                 </div>
             </div>
+            <div class="display details">
+                <div class="title-2">
+                    <span class='details_location'>Aktobe</span>
+                </div>
+                <div class="details-2">
+                    <ul>
+                        <li class='details_temperature'>Temperature: 14</li>
+                        <li class='details_feelslike'>Feels like: 10</li>
+                        <li class='details_weather'>Weather: Clouds</li>
+                        <li class='details_sunrise'>Sunrise: 03:21</li>
+                        <li class='details_sunset'>Sunset: 18:54</li>
+                    </ul>
+                </div>
+            </div>
             <nav>
-                <div class="button active">Now</div>
-                <div class="button">Details</div>
-                <div class="button">Forecast</div>
+                <div class="button-nav active-btn">Now</div>
+                <div class="button-nav ">Details</div>
+                <div class="button-nav ">Forecast</div>
             </nav>
         </section>
         <section class='right'>
@@ -40,12 +54,6 @@
             </div>
             <div class="location">
                 <ul class="location-ul">
-                    <li class="li-0">Amur</li>
-                    <li class="li-1">Samara</li>
-                    <li class="li-2">Bali</li>
-                    <li class="li-3">Dane</li>
-                    <li class="li-4">Kilo</li>
-                    <li class="li-5">Nur-Sultan</li>
                 </ul>
             </div>
         </section>
@@ -54,7 +62,7 @@
 
 
     <!-- ---- -->
-    <script src="scripts.js"></script>
+    <script type="module" src="scripts.js"></script>
 </body>
 
 </html>

@@ -31,10 +31,10 @@ main {
     border: 1px solid black;
     
 }
-.display {
+.now {
+    display: none;
     height: 345px;
     width: auto;
-
 }
 
 nav {
@@ -76,7 +76,7 @@ nav {
     list-style-type: none;
 }
 
-.button {
+.button-nav {
     width: 33.3%;
     border: 1px solid black;
     text-align: center;
@@ -90,7 +90,7 @@ nav {
     border-bottom: none;
 }
 
-.temp-1 {
+.now_temperature {
     height: 33.3%;
     font-family: Roboto;
     font-style: normal;
@@ -100,7 +100,7 @@ nav {
     padding: 20px 15px;
 }
 
-.img-1 {
+.now_img {
     height: 33.3%;
     text-align: center;
 
@@ -111,8 +111,8 @@ nav {
     display: flex;
 }
 
-.city-1 {
-    width: 50%;
+.now_lacation {
+    width: 70%;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -122,8 +122,8 @@ nav {
     padding-left: 10px;
 }
 
-.love-1 {
-    width: 50%;
+.now_favorite {
+    width: 30%;
     text-align: right;
     padding-top: 30px;
     padding-right: 20px;
@@ -153,9 +153,14 @@ input:hover, input:focus{
     outline: 0;
     }
 
-.active {
+.active-btn {
     background-color: black;
     color: white;
+}
+
+.details {
+    
+    display: none;
 }
 
 .title-2 {
@@ -173,7 +178,7 @@ input:hover, input:focus{
     line-height: 28px;
 }
 .details-2 {
-    padding: 15px 20px;
+    padding: 35px 20px;
 }
 
 .details-2 li{
@@ -184,4 +189,16 @@ input:hover, input:focus{
     line-height: 28px;
     list-style-type: none;
     line-height: 1.8;
+}
+
+.remove {
+    position:absolute;
+    display: block;
+    margin-left: 240px;
+    margin-top: -35px;
+
+}
+
+.active-dis {
+    display: block;
 }
