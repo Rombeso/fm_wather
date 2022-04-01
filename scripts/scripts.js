@@ -58,7 +58,9 @@ SEARCH_LOCATION.addEventListener('keydown', (e) => {
 const getWather = (cityName) => {
     const url = `${URL.SERVER_URL}?q=${cityName}&units=metric&appid=${URL.API_KEY}`;
     fetch(url, {
-        'Content-Type': 'text/plain'
+        headers: {
+            "Content-Type": "text/plain;charset=UTF-8"
+        },
     })
         .then(response => response.json())
         .then(randerWeather)
