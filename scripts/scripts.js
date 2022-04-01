@@ -30,6 +30,7 @@ function convertTime(unixTime) {
 // Отрисовка правой части при загрузки страницы
 const randerFavoritCities = () => {
     let currentCity = localStorage.getItem('currentCity');
+    !currentCity ? currentCity = 'Moscow' : '';
     getWather(currentCity)
     favoriteCities.map(item => {
         let newLi = document.createElement("li");
