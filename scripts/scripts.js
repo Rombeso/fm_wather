@@ -8,6 +8,7 @@ const URL = {
 };
 
 const SEARCH_LOCATION = document.querySelector('input');
+const SEARCH_IMG = document.querySelector('.search_img');
 const BUTTONS = document.querySelectorAll('.button-nav');
 const NAV = document.querySelector('NAV');
 const DISPLAY = document.querySelectorAll('.display')
@@ -48,12 +49,21 @@ window.addEventListener('load', randerFavoritCities)
 
 // По нажатию Enter отправка данных из Input на отрисовку для Дисплей
 SEARCH_LOCATION.addEventListener('keydown', (e) => {
-    if (e.code == 'Enter') {
+    if (e.code == 'Enter' && SEARCH_LOCATION.value) {
         getWather(SEARCH_LOCATION.value);
         SEARCH_LOCATION.value = '';
         localStorage.setItem('currentCity', SEARCH_LOCATION.value)
     }
 });
+
+SEARCH_IMG.addEventListener('click', (e) => {
+    if (SEARCH_LOCATION.value) {
+        getWather(SEARCH_LOCATION.value);
+        SEARCH_LOCATION.value = '';
+        localStorage.setItem('currentCity', SEARCH_LOCATION.value)
+    }
+}
+);
 
 // Получение данных с сервера
 const getWather = (cityName) => {
@@ -107,7 +117,6 @@ NOW.FAVORITE_IMG.onclick = addFavourites;
 
 // При клике на любимый город из правого списка, выводим его на отрисовку в диспелей
 const addFavouritesInDisplay = (e) => {
-    console.log(e.target.localName);
     let liLocation = e.target.textContent
     getWather(liLocation)
     localStorage.setItem('currentCity', liLocation)

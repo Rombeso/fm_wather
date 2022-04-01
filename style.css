@@ -169,6 +169,13 @@ input:hover, input:focus{
     outline: 0;
     }
 
+.search_img {
+     cursor: pointer;
+}
+.search_img:hover {
+    height: 50px;
+}
+
 .active-btn {
     background-color: black;
     color: white;
