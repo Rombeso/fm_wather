@@ -48,7 +48,6 @@ window.addEventListener('load', randerFavoritCities)
 // По нажатию Enter отправка данных из Input на отрисовку для Дисплей
 SEARCH_LOCATION.addEventListener('keydown', (e) => {
     if (e.code == 'Enter') {
-        debugger
         getWather(SEARCH_LOCATION.value);
         SEARCH_LOCATION.value = '';
         localStorage.setItem('currentCity', SEARCH_LOCATION.value)
@@ -58,9 +57,7 @@ SEARCH_LOCATION.addEventListener('keydown', (e) => {
 // Получение данных с сервера
 const getWather = (cityName) => {
     const url = `${URL.SERVER_URL}?q=${cityName}&units=metric&appid=${URL.API_KEY}`;
-    fetch(url, {
-        referrerPolicy: "strict-origin-when-cross-origin"
-    })
+    fetch(url)
         .then(response => response.json())
         .then(randerWeather)
 };
