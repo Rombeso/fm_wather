@@ -74,10 +74,15 @@ nav {
     font-size: 24px;
     line-height: 1.8;
     list-style-type: none;
+    cursor: pointer;
+}
+
+.location li:hover {
+font-weight: bold;
 }
 
 .button-nav {
-    width: 33.3%;
+    width: 50%;
     border: 1px solid black;
     text-align: center;
     font-family: Roboto;
@@ -88,6 +93,12 @@ nav {
     padding: 10px;
     border-right: none;
     border-bottom: none;
+    cursor: pointer;
+}
+
+.button-nav:hover {
+    /* border: 1px solid black; */
+    font-weight: bold;
 }
 
 .now_temperature {
@@ -127,6 +138,11 @@ nav {
     text-align: right;
     padding-top: 30px;
     padding-right: 20px;
+    cursor: pointer;
+}
+
+.now_favorite img:hover {
+    height: 28px;
 }
 
 .search {
@@ -159,7 +175,6 @@ input:hover, input:focus{
 }
 
 .details {
-    
     display: none;
 }
 
@@ -191,12 +206,21 @@ input:hover, input:focus{
     line-height: 1.8;
 }
 
+.details_weather {
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
 .remove {
     position:absolute;
     display: block;
     margin-left: 240px;
     margin-top: -35px;
+    cursor: pointer;
+}
 
+.remove:hover {
+    height: 25px;
 }
 
 .active-dis {
