@@ -3,7 +3,7 @@ import { FAVORITES, NOW, DETAILS } from './constants.js'
 
 // Отрисовка Дисплея
 const URL = {
-    SERVER_URL: 'http://api.openweathermap.org/data/2.5/weather',
+    SERVER_URL: 'https://api.openweathermap.org/data/2.5/weather',
     API_KEY: 'f660a2fb1e4bad108d6160b7f58c555f',
 };
 
@@ -57,11 +57,7 @@ SEARCH_LOCATION.addEventListener('keydown', (e) => {
 // Получение данных с сервера
 const getWather = (cityName) => {
     const url = `${URL.SERVER_URL}?q=${cityName}&units=metric&appid=${URL.API_KEY}`;
-    fetch(url, {
-        headers: {
-            "Content-Type": "text/plain;charset=UTF-8"
-        },
-    })
+    fetch(url)
         .then(response => response.json())
         .then(randerWeather)
 };
