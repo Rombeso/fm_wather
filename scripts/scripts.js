@@ -58,7 +58,9 @@ SEARCH_LOCATION.addEventListener('keydown', (e) => {
 // Получение данных с сервера
 const getWather = (cityName) => {
     const url = `${URL.SERVER_URL}?q=${cityName}&units=metric&appid=${URL.API_KEY}`;
-    fetch(url)
+    fetch(url, {
+        referrerPolicy: "strict-origin-when-cross-origin"
+    })
         .then(response => response.json())
         .then(randerWeather)
 };
