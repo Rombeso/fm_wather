@@ -106,7 +106,7 @@ const addFavourites = () => {
     let newLi = document.createElement("li");
     let remImg = document.createElement("img");
     remImg.className = `remove ${NOW.LOCATION.textContent}`;
-    remImg.setAttribute('src', "img/delete.png");
+    remImg.setAttribute('src', "../img/delete.png");
     newLi.className = 'location-li';
     newLi.innerHTML = NOW.LOCATION.textContent;
     FAVORITES.LIST.append(newLi);

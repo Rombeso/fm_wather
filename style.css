@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+
+
+/* @media only screen and (max-width: 600px) {} */
+
 main {
     display: flex;
     width: 600px;
