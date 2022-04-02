@@ -39,7 +39,7 @@ const randerFavoritCities = () => {
         remImg.className = `remove ${item}`
         newLi.className = 'location-li';
         newLi.innerHTML = item;
-        remImg.setAttribute('src', "../img/delete.png")
+        remImg.setAttribute('src', "https://rombeso.github.io/fm_wather/img/delete.png")
         FAVORITES.LIST.append(newLi);
         FAVORITES.LIST.append(remImg);
     })
